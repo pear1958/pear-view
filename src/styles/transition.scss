@@ -1,0 +1,88 @@
+// fade
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// fade-transform
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all 0.2s;
+}
+
+.fade-transform-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+// fade-slide
+.fade-slide-leave-active,
+.fade-slide-enter-active {
+  transition: all 0.3s;
+}
+
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+// drawer
+.drawer-enter-active,
+.drawer-leave-active {
+  transition: all 0.25s ease-in-out;
+}
+
+.drawer-enter-from,
+.drawer-leave-to {
+  transform: translateX(100%);
+}
+
+// Breadcrumb
+.breadcrumb-enter-active {
+  transition: all 0.2s;
+}
+
+.breadcrumb-enter-from,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+// dialog
+.dialog-leave-active,
+.dialog-enter-active {
+  transition: all 0.2s;
+}
+
+.dialog-enter-from,
+.dialog-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -20px) !important;
+}
+
+// dialog-y
+.dialog-y-leave-active,
+.dialog-y-enter-active {
+  transition: all 0.2s;
+}
+
+.dialog-y-enter-from,
+.dialog-y-leave-to {
+  opacity: 0;
+  transform: translate(-50%, calc(-50% - 20px)) !important;
+}
