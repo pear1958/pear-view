@@ -1,8 +1,4 @@
-html {
-  --pear-primary: #fc4355;
-}
-
-@import './transition.scss';
-@import './Collapse.scss';
-@import './Loading.scss';
-@import './Dialog.scss';
+@use './Base.scss';
+@use './Collapse.scss';
+@use './Loading.scss';
+@use './Dialog.scss';
