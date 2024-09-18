@@ -31,8 +31,7 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue'
 import { Icon } from '@iconify/vue'
-import Button from 'ant-design-vue/lib/button'
-import 'ant-design-vue/lib/button/style'
+import Button from '@/index'
 
 defineOptions({
   name: 'Dialog'

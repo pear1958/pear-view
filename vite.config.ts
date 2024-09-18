@@ -28,14 +28,6 @@ export default defineConfig({
       outDir: 'dist/types'
     })
   ],
-  css: {
-    preprocessorOptions: {
-      less: {
-        // 允许 Less中 执行内联js代码, eg: top: ~`Math.random() * 100 + 'px'`;
-        javascriptEnabled: true
-      }
-    }
-  },
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),

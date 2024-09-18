@@ -45,12 +45,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import Collapse from '@/components/collapse'
-import { CollapseItem } from '@/components/collapse/index'
-import Loading from '@/components/loading'
-import Dialog, { openDialog } from '@/components/dialog'
-import Button from 'ant-design-vue/lib/button'
-import 'ant-design-vue/lib/button/style'
+import { Collapse, CollapseItem, Loading, Dialog, openDialog, Button } from './'
 
 defineOptions({
   name: 'TestApp'
