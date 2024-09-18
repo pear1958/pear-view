@@ -72,7 +72,3 @@ provide(collapseContextKey, {
   handleItemClick
 })
 </script>
-
-<style lang="scss" scoped>
-@import './index.scss';
-</style>

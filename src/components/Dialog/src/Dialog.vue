@@ -100,7 +100,3 @@ const handleOk = () => {
   closeDialog()
 }
 </script>
-
-<style lang="scss" scoped>
-@import './dialog.scss';
-</style>

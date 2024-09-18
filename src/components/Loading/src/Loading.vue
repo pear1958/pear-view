@@ -25,7 +25,3 @@ defineProps({
   }
 })
 </script>
-
-<style lang="scss" scoped>
-@import './loading.scss';
-</style>
