@@ -10,11 +10,16 @@ const pathSrc = resolve(__dirname, 'src')
 
 const root = 'src'
 
-const files = await fg.glob('**/*.{js,ts,vue}', {
-  cwd: root,
-  absolute: true,
-  onlyFiles: true
-})
+const getFiles = async () => {
+  const files = await fg.glob('**/*.{js,ts,vue}', {
+    cwd: root,
+    absolute: true,
+    onlyFiles: true
+  })
+  return files
+}
+
+const files = getFiles()
 
 export default defineConfig({
   base: './',
@@ -40,7 +45,7 @@ export default defineConfig({
   build: {
     lib: {
       // entry: resolve(__dirname, 'src/index.ts'),
-      entry: files,
+      entry: files as any,
       // 通过cdn引入后的全局变量名称  eg: 引入 EP cdn后, app.use(ElementPlus)
       // eg: https://element-plus.org/zh-CN/guide/installation.html#hello-world
       // name: 'PearView',

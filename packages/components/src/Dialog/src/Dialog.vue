@@ -20,8 +20,8 @@
         </main>
 
         <footer>
-          <Button @click="cancel">取消</Button>
-          <Button type="primary" @click="handleOk" style="margin-left: 12px">确认</Button>
+          <span @click="cancel">取消</span>
+          <span type="primary" @click="handleOk" style="margin-left: 12px">确认</span>
         </footer>
       </div>
     </Transition>
@@ -31,7 +31,7 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue'
 import { Icon } from '@iconify/vue'
-import Button from '@/index'
+// import Button from '@/index'
 
 defineOptions({
   name: 'Dialog'

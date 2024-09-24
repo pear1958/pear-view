@@ -45,7 +45,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Collapse, CollapseItem, Loading, Dialog, openDialog, Button } from './'
+import { Collapse, CollapseItem, Loading, Dialog, openDialog, Button } from '.'
 
 defineOptions({
   name: 'TestApp'
