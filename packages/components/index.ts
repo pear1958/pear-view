@@ -1,21 +1,18 @@
-import type { App } from 'vue'
-import Collapse, { CollapseItem } from './src/Collapse'
-import Loading from './src/Loading'
-import Dialog, { openDialog } from './src/Dialog'
-import Button from './src/Button'
+import type { App, Component } from 'vue'
+import * as components from './src'
+import openDialog from './src/Dialog/src/openDialog'
 
 // import '@/styles/index.scss'
 
-const components = [Collapse, CollapseItem, Loading, Dialog, Button]
-
-const install = (app: App) => {
-  components.forEach(compoment => {
-    app.component(compoment.name as string, compoment)
-  })
-}
-
 export default {
-  install
+  install: (app: App) => {
+    for (const name in components) {
+      // @ts-ignore
+      app.component(name, components[name])
+    }
+  }
 }
 
-export { install, Collapse, CollapseItem, Loading, Dialog, openDialog, Button }
+export * from './src/index'
+
+export { openDialog }

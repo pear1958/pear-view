@@ -1,3 +1,1 @@
-import sayHello from '@pear-view/components'
-
-sayHello()
+import { Button } from '@pear-view/components'

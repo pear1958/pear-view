@@ -1,11 +1,10 @@
 import type { App } from 'vue'
 import Dialog from './src/Dialog.vue'
-import openDialog from './src/openDialog'
 
 Dialog.install = (app: App) => {
   app.component(Dialog.name as string, Dialog)
 }
 
-export { openDialog }
+export { Dialog }
 
 export default Dialog

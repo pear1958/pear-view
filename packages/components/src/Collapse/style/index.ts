@@ -1,1 +1,1 @@
-import '@/styles/Collapse.scss';
+// import '@/styles/Collapse.scss';

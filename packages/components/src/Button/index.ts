@@ -5,4 +5,5 @@ Button.install = (app: App) => {
   app.component(Button.name as string, Button)
 }
 
+export { Button }
 export default Button

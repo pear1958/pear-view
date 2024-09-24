@@ -10,8 +10,6 @@ CollapseItem.install = (app: App) => {
   app.component(CollapseItem.name as string, CollapseItem)
 }
 
+export { Collapse, CollapseItem }
+
 export default Collapse
-
-export { CollapseItem }
-
-export * from './src/types'

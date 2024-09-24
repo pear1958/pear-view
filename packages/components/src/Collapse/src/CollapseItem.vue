@@ -15,7 +15,8 @@
       @click="handleClick"
     >
       <slot name="title">{{ title }}</slot>
-      <Icon icon="ep:arrow-right" class="header-angle" />
+      <!-- <Icon icon="ep:arrow-right" class="header-angle" /> -->
+      <span>x</span>
     </div>
 
     <Transition name="slide" v-on="transitionEvents">
@@ -30,7 +31,7 @@
 
 <script setup lang="ts">
 import { computed, inject } from 'vue'
-import { Icon } from '@iconify/vue'
+// import { Icon } from '@iconify/vue'
 import { collapseContextKey } from './types'
 
 defineOptions({

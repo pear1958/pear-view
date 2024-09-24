@@ -11,7 +11,8 @@
           <span class="title" v-else>{{ title }}</span>
 
           <span class="close-icon" @click="closeDialog">
-            <Icon icon="ep:close" />
+            <!-- <Icon icon="ep:close" /> -->
+            <span>x</span>
           </span>
         </header>
 
@@ -30,7 +31,7 @@
 
 <script setup lang="ts">
 import { computed, useSlots } from 'vue'
-import { Icon } from '@iconify/vue'
+// import { Icon } from '@iconify/vue'
 // import Button from '@/index'
 
 defineOptions({
