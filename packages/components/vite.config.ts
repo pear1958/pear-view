@@ -42,7 +42,6 @@ export default defineConfig({
           format: 'es',
           // 打包后的文件名
           entryFileNames: (chunkInfo: PreRenderedChunk) => {
-            // console.log('chunkInfo', chunkInfo)
             return `${chunkInfo.name}.mjs`
           },
           preserveModules: true, // 让打包目录和我们目录对应
