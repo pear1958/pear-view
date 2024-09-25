@@ -6,9 +6,15 @@
     "dev": "vite"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "@vitejs/plugin-vue-jsx": "^4.0.1",
+    "@vue/runtime-core": "^3.5.8",
     "less": "^4.2.0",
     "sass": "^1.78.0",
     "typescript": "^5.5.3",
+    "unplugin-vue-define-options": "^1.5.1",
+    "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.2.2",
     "vue": "3.3.4"
   },
   "description": "Vue3 components library",

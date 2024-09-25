@@ -7,11 +7,6 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@pear-view/components": "workspace:^",
-    "pear-view": "workspace:^"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^5.1.2",
-    "vite": "^5.4.1"
+    "@pear-view/components": "workspace:^"
   }
 }
