@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import '../style/Button.less'
+import '../style/Button.scss'
 
 defineOptions({
   name: 'Button'

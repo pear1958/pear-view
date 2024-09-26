@@ -1,19 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+// @ts-ignore
 import DefineOptions from 'unplugin-vue-define-options/vite'
 import dts from 'vite-plugin-dts'
-
-interface PreRenderedChunk {
-  exports: string[]
-  facadeModuleId: string | null
-  isDynamicEntry: boolean
-  isEntry: boolean
-  isImplicitEntry: boolean
-  moduleIds: string[]
-  name: string
-  type: 'chunk'
-}
 
 export default defineConfig({
   plugins: [
@@ -33,11 +23,11 @@ export default defineConfig({
 
         for (const key of keys) {
           const bundler: any = bundle[key as any]
-          // rollup内置方法, 将所有输出文件code中的.less换成.css, 因为我们当时没有打包less文件
+          // rollup内置方法, 将所有输出文件code中的.scss换成.css, 因为我们当时没有打包scss文件
           this.emitFile({
             type: 'asset',
             fileName: key, //文件名名不变
-            source: bundler.code.replace(/\.less/g, '.css')
+            source: bundler.code.replace(/\.scss/g, '.css')
           })
         }
       }
@@ -54,7 +44,7 @@ export default defineConfig({
       // fileName: 'pear-view',
     },
     rollupOptions: {
-      external: ['vue', /\.less/],
+      external: ['vue', /\.scss/],
       input: ['index.ts'],
       output: [
         {

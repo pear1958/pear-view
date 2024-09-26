@@ -33,7 +33,7 @@
 import { computed, useSlots } from 'vue'
 // import { Icon } from '@iconify/vue'
 // import Button from '@/index'
-import '../style/Dialog.less'
+import '../style/Dialog.scss'
 
 defineOptions({
   name: 'Dialog'

@@ -33,7 +33,7 @@
 import { computed, inject } from 'vue'
 // import { Icon } from '@iconify/vue'
 import { collapseContextKey } from './types'
-import '../style/Collapse.less'
+import '../style/Collapse.scss'
 
 defineOptions({
   name: 'CollapseItem'

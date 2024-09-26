@@ -1,5 +1,6 @@
 import { series, parallel, src, dest } from 'gulp'
-import less from 'gulp-less'
+import glupSass from 'gulp-sass'
+import sassLang from 'sass'
 import autoprefixer from 'gulp-autoprefixer'
 import delPath from '../utils/delpath'
 import { componentPath } from '../utils/paths'
@@ -11,8 +12,10 @@ export const removeDist = () => {
 
 // 打包样式
 export const buildStyle = () => {
-  return src(`${componentPath}/src/**/style/**.less`)
-    .pipe(less())
+  const sass = glupSass(sassLang)
+
+  return src(`${componentPath}/src/**/style/**.scss`)
+    .pipe(sass())
     .pipe(autoprefixer())
     .pipe(dest(`${componentPath}/dist/es/src`))
     .pipe(dest(`${componentPath}/dist/lib/src`))
