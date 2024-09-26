@@ -22,25 +22,33 @@ export default defineConfig({
     }),
     {
       name: 'style',
+      // rullup插件钩子之一，允许在文件生成之前修改文件
+      // 可以通过修改bundle 对象来改变即将生成的文件内容
+      // 或者通过this.emitFile方法来发出额外的文件, 将覆盖原文件
       generateBundle(config, bundle) {
         // 这里可以获取打包后的文件目录以及代码code
         const keys = Object.keys(bundle)
 
         for (const key of keys) {
-          const bundler: any = bundle[key as any]
+          const bundler = bundle[key]
+
+          if (bundler.type === 'chunk') {
+            bundler.code = bundler.code.replace(/\.scss/g, '.css')
+          }
+
           // rollup内置方法, 将所有输出文件code中的.scss换成.css, 因为我们当时没有打包scss文件
-          this.emitFile({
-            type: 'asset',
-            fileName: key, //文件名名不变
-            source: bundler.code.replace(/\.scss/g, '.css')
-          })
+          // this.emitFile({
+          //   type: 'asset',
+          //   fileName: key, // 文件名不变
+          //   source: bundler.code.replace(/\.scss/g, '.css')
+          // })
         }
       }
     }
   ],
   build: {
-    // 避免打包style文件夹被覆盖
-    emptyOutDir: false,
+    // 避免 styles 文件夹被 buildComponent() 覆盖
+    emptyOutDir: false, // 构建前清空输出目录
     lib: {
       entry: './index.ts'
       // // 通过cdn引入后的全局变量名称

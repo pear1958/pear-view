@@ -1,4 +1,4 @@
-import { series, parallel, src, dest } from 'gulp'
+import { series, parallel, src, dest, type TaskFunction } from 'gulp'
 import sassLang from 'sass'
 import glupSass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'
@@ -26,10 +26,12 @@ export const buildComponent = async () => {
   run('pnpm run build', componentPath)
 }
 
-export default series(
+export const build: TaskFunction = series(
   async () => removeDist(),
   parallel(
     async () => buildStyle(),
     async () => buildComponent()
   )
 )
+
+export default build
