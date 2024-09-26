@@ -2,7 +2,7 @@
   <div class="btn" :class="buttonClass">
     <slot />
     <div>
-      <img src="../../assets/test1.png" class="test-img" />
+      <img :src="imageUrl" class="test-img" />
     </div>
   </div>
 </template>
@@ -11,6 +11,8 @@
 import { computed } from 'vue'
 import '../../styles/index.scss'
 import '../../styles/button.scss'
+
+import imageUrl from '../../assets/test1.png'
 
 defineOptions({
   name: 'Button'

@@ -64,6 +64,7 @@ export default defineConfig({
           format: 'es',
           // 打包后的文件名
           entryFileNames: '[name].mjs',
+          // assetFileNames: 'assets/[name]-[hash][extname]',
           preserveModules: true, // 让打包目录和我们目录对应
           exports: 'named', // https://cn.rollupjs.org/configuration-options/#output-exports
           dir: './dist/es'
@@ -71,6 +72,7 @@ export default defineConfig({
         {
           format: 'cjs',
           entryFileNames: '[name].js',
+          // assetFileNames: 'assets/[name]-[hash][extname]',
           preserveModules: true,
           exports: 'named',
           dir: './dist/lib'
