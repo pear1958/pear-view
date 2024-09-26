@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import { PropType } from 'vue'
-import '../style/Loading.scss'
+import '../../styles/loading.scss'
 
 defineOptions({
   name: 'Loading'
