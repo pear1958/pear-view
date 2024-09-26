@@ -2,8 +2,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
-// @ts-ignore
-import DefineOptions from 'unplugin-vue-define-options/vite'
 import dts from 'vite-plugin-dts'
 
 const pathSrc = resolve(__dirname, 'src')
@@ -22,7 +20,6 @@ export default defineConfig({
       outDir: ['./dist/es/src', './dist/lib/src'],
       tsconfigPath: '../../tsconfig.json'
     }),
-    DefineOptions(),
     {
       name: 'style',
       generateBundle(config, bundle) {

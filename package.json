@@ -20,7 +20,6 @@
     "sass": "^1.78.0",
     "sucrase": "^3.35.0",
     "typescript": "^5.5.3",
-    "unplugin-vue-define-options": "^1.2.1",
     "vite": "^5.4.1",
     "vite-plugin-dts": "^4.2.2",
     "vue": "3.3.4"
