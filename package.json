@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:dist": "gulp -f packages/components/script/build/index.ts"
+    "build:dist": "gulp -f packages/components/script/build/index.ts & pnpm run --filter ./packages/utils build"
   },
   "devDependencies": {
     "@types/gulp": "^4.0.17",

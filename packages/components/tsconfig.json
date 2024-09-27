@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  // 指定要编译的路径列表
+  "include": [
+    "../components/**/*.ts",
+    "../components/**/*.d.ts",
+    "../components/**/*.tsx",
+    "../components/**/*.vue",
+    "index.ts",
+    "types",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.js",
+    "vite.config.ts",
+    "script",
+  ],
+}

@@ -1,5 +1,5 @@
 {
-  // 配置编译选项
+  // 配置编译选项 https://typescript.p6p.net/typescript-tutorial/tsconfig.json.html#compileoptions
   "compilerOptions": {
     "target": "ESNext", // 用于指定编译之后的版本目标  如果设为 ESNEXT，则为最新 ES 规范版本
     "useDefineForClassFields": true, // class编译优化
@@ -25,33 +25,22 @@
     "allowJs": true, // 指定是否允许编译JS文件，默认false, 即不编译JS文件
     "noEmit": true, // 不生成编译后 输出的js文件
     "baseUrl": "./",
+    "allowImportingTsExtensions": true,
     // import的时候 找不到模块 @/xxx 或其相应的类型声明
-    // "paths": {
-    //   "@/*": [
-    //     "src/*"
-    //   ],
-    // },
-    "types": [
-      // "node",
-      // "vite/client",
-      // "element-plus/global",
-    ],
-    "allowImportingTsExtensions": true
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@pear-view/*": [
+        "packages/*"
+      ],
+    },
   },
-  // 指定要编译的路径列表
-  "include": [
-    "packages/**/*.ts",
-    "packages/**/*.d.ts",
-    "packages/**/*.tsx",
-    "packages/**/*.vue",
-    "types/**/*.d.ts",
-    "types/**/*.ts",
-    // "vite.config.ts"
-  ],
-  // 指定编译器 要排除的、不编译的文件
+  // 指定编译器 要排除的, 不编译的文件
   "exclude": [
     "node_modules",
     "dist",
-    "**/*.js"
+    "**/*.js",
+    "vite.config.ts",
   ],
 }

@@ -6,6 +6,9 @@ import delPath from '../utils/delpath'
 import { componentPath } from '../utils/paths'
 import run from '../utils/run'
 
+// 我们需要使用 ts 以及新的 es6 语法, 而 gulp 是不支持的
+// 所以我们需要安装一些依赖使得 gulp 支持这些, 其中 sucrase 让我们执行 gulp 可以使用最新语法并且支持 ts
+
 export const removeDist = () => {
   return delPath(`${componentPath}/dist`)
 }

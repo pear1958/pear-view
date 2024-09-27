@@ -1,1 +1,1 @@
-import { Button } from '@pear-view/components'
+export * from './src/file'

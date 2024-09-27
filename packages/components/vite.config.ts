@@ -3,6 +3,14 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
+// import { isImgExt } from '@pear-view/utils/file'
+
+export const isImgExt = (fileName: string) => {
+  if (!fileName) return false
+  const suffixRegex =
+    /\.(bmp|jpg|png|tif|gif|pcx|tga|exif|fpx|svg|psd|cdr|pcd|dxf|ufo|eps|ai|raw|wmf|jpeg)$/
+  return suffixRegex.test(fileName)
+}
 
 const pathSrc = resolve(__dirname, 'src')
 
@@ -16,9 +24,9 @@ export default defineConfig({
     vue(),
     vueJsx(),
     dts({
-      entryRoot: 'src',
-      outDir: ['./dist/es/src', './dist/lib/src'],
-      tsconfigPath: '../../tsconfig.json'
+      entryRoot: '../components',
+      outDir: ['./dist/es', './dist/lib'],
+      tsconfigPath: './tsconfig.json'
     }),
     {
       name: 'style',
@@ -29,19 +37,13 @@ export default defineConfig({
         // 这里可以获取打包后的文件目录以及代码code
         const keys = Object.keys(bundle)
 
+        // 将所有输出文件code中的.scss换成.css, 因为我们当时没有打包scss文件
         for (const key of keys) {
           const bundler = bundle[key]
 
           if (bundler.type === 'chunk') {
             bundler.code = bundler.code.replace(/\.scss/g, '.css')
           }
-
-          // rollup内置方法, 将所有输出文件code中的.scss换成.css, 因为我们当时没有打包scss文件
-          // this.emitFile({
-          //   type: 'asset',
-          //   fileName: key, // 文件名不变
-          //   source: bundler.code.replace(/\.scss/g, '.css')
-          // })
         }
       }
     }
@@ -49,11 +51,12 @@ export default defineConfig({
   build: {
     // 避免 styles 文件夹被 buildComponent() 覆盖
     emptyOutDir: false, // 构建前清空输出目录
+    minify: false,
     lib: {
       entry: './index.ts'
-      // // 通过cdn引入后的全局变量名称
+      // 通过cdn引入后的全局变量名称
       // name: 'pear-view',
-      // // 打包出来的文件名, 默认为package.json的name选项
+      // 打包出来的文件名, 默认为package.json的name选项
       // fileName: 'pear-view',
     },
     rollupOptions: {
@@ -63,8 +66,10 @@ export default defineConfig({
         {
           format: 'es',
           // 打包后的文件名
-          entryFileNames: '[name].mjs',
-          // assetFileNames: 'assets/[name]-[hash][extname]',
+          entryFileNames: chunkInfo => {
+            const { name } = chunkInfo
+            return isImgExt(name) ? name : name + '.mjs'
+          },
           preserveModules: true, // 让打包目录和我们目录对应
           exports: 'named', // https://cn.rollupjs.org/configuration-options/#output-exports
           dir: './dist/es'
@@ -72,7 +77,6 @@ export default defineConfig({
         {
           format: 'cjs',
           entryFileNames: '[name].js',
-          // assetFileNames: 'assets/[name]-[hash][extname]',
           preserveModules: true,
           exports: 'named',
           dir: './dist/lib'
