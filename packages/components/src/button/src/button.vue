@@ -12,9 +12,9 @@ import { computed } from 'vue'
 import '../../styles/index.scss'
 import '../../styles/button.scss'
 import imageUrl from '../../assets/test1.png'
-// import { test2 } from '@pear-view/utils'
+import { test2 } from '@pear-view/utils'
 
-// test2()
+test2()
 
 defineOptions({
   name: 'Button'

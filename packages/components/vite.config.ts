@@ -3,10 +3,8 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
-// import { isImgExt } from '@pear-view/utils/file'
 
 export const isImgExt = (fileName: string) => {
-  if (!fileName) return false
   const suffixRegex =
     /\.(bmp|jpg|png|tif|gif|pcx|tga|exif|fpx|svg|psd|cdr|pcd|dxf|ufo|eps|ai|raw|wmf|jpeg)$/
   return suffixRegex.test(fileName)
@@ -60,7 +58,7 @@ export default defineConfig({
       // fileName: 'pear-view',
     },
     rollupOptions: {
-      external: ['vue', /\.scss/],
+      external: ['vue', /\.scss/, '@pear-view/utils'],
       input: ['index.ts'],
       output: [
         {
