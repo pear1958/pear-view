@@ -3,12 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
-
-export const isImgExt = (fileName: string) => {
-  const suffixRegex =
-    /\.(bmp|jpg|png|tif|gif|pcx|tga|exif|fpx|svg|psd|cdr|pcd|dxf|ufo|eps|ai|raw|wmf|jpeg)$/
-  return suffixRegex.test(fileName)
-}
+import { isImgExt } from './script/utils/file'
 
 const pathSrc = resolve(__dirname, 'src')
 
