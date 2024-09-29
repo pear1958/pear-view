@@ -15,6 +15,9 @@
   "scripts": {
     "build": "vite build"
   },
+  "peerDependencies": {
+    "vue": "3.2.37"
+  },
   "dependencies": {
     "@pear-view/utils": "workspace:^"
   },

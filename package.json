@@ -8,9 +8,6 @@
     "publish:pear-view": "gulp -f packages/components/script/publish/index.ts",
     "publish:pear-utils": "gulp -f packages/utils/publish/index.ts"
   },
-  "peerDependencies": {
-    "vue": "3.2.37"
-  },
   "devDependencies": {
     "@types/gulp": "^4.0.17",
     "@types/gulp-autoprefixer": "^0.0.37",

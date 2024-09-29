@@ -13,3 +13,9 @@ Node v16.14.2
 - [ ] 发布流程设计
 - [ ] 国际化
 - [ ] SSR 支持
+
+### 发布脚本
+
+```
+pnpm publish --no-git-checks
+```
