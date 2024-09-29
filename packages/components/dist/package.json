@@ -1,0 +1,28 @@
+{
+  "name": "pear-view-ui",
+  "version": "1.0.3",
+  "module": "es/index.mjs",
+  "main": "lib/index.js",
+  "typings": "es/index.d.ts",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "release": "release-it"
+  },
+  "keywords": [
+    "pear-view",
+    "vue3组件库"
+  ],
+  "author": "zhangzy",
+  "description": "components library",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/z-pear/pear-view"
+  }
+}
