@@ -10,3 +10,4 @@ export default {
 }
 
 export * from './src'
+export { default as openDialog } from './src/dialog/src/openDialog'

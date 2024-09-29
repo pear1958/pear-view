@@ -18,6 +18,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
     DefineOptions(),
+    // 默认情况, 生成的类型文件会跟随源文件的结构
     dts({
       entryRoot: '../components',
       outDir: ['./dist/es', './dist/lib'],
@@ -49,13 +50,14 @@ export default defineConfig({
     minify: false,
     lib: {
       entry: './index.ts'
-      // 通过cdn引入后的全局变量名称
+      // 通过cdn引入后的全局变量名称 eg: 引入 EP cdn后, app.use(ElementPlus)
+      // eg: https://element-plus.org/zh-CN/guide/installation.html#hello-world
       // name: 'pear-view',
       // 打包出来的文件名, 默认为package.json的name选项
       // fileName: 'pear-view',
     },
     rollupOptions: {
-      external: ['vue', /\.scss/, '@pear-view/utils'],
+      external: ['vue', /\.scss/, '@pear-view/utils', '@iconify/vue'],
       input: ['index.ts'],
       output: [
         {
