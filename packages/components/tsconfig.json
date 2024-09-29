@@ -1,5 +1,10 @@
 {
   "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": [
+      "unplugin-vue-define-options/macros-global"
+    ]
+  },
   // 指定要编译的路径列表
   "include": [
     "../components/**/*.ts",

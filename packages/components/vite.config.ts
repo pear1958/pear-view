@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
+import DefineOptions from 'unplugin-vue-define-options/vite'
 import { isImgExt } from './script/utils/file'
 
 const pathSrc = resolve(__dirname, 'src')
@@ -16,6 +17,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
+    DefineOptions(),
     dts({
       entryRoot: '../components',
       outDir: ['./dist/es', './dist/lib'],
