@@ -1,4 +1,4 @@
-@import './base.scss';
+@import './variable.scss';
 
 .loading-box {
   width: 100%;
@@ -20,7 +20,7 @@
   display: inline-block;
   width: 14px;
   height: 14px;
-  background-color: var(--pear-primary);
+  background-color: $pear-primary-color;
   border-radius: 100%;
   opacity: 0.3;
   transform: scale(0.75);

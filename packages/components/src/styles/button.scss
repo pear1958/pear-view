@@ -1,8 +1,8 @@
-@import './base.scss';
+@import './variable.scss';
 
 .btn {
   padding: 8px 12px;
-  border: 1px solid var(--pear-primary);
+  border: 1px solid $pear-primary-color;
   border-radius: 3px;
   display: inline-block;
   cursor: pointer;
