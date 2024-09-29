@@ -2,15 +2,34 @@
   "name": "@pear-view/components",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
-  "main": "index.ts",
+  "module": "./dist/es/index.mjs",
+  "main": "./dist/lib/index.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "types": "./dist/es/index.d.ts",
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "release": "release-it"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@pear-view/utils": "workspace:^"
+  },
+  "author": "zhangzy56",
+  "description": "Vue3 components library",
+  "license": "MIT",
+  "keywords": [
+    "Component",
+    "UI",
+    "Vue3"
+  ],
+  "homepage": "https://www.npmjs.com/package/pear-view",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/z-pear/pear-view"
   }
 }

@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:dist": "gulp -f packages/components/script/build/index.ts & pnpm run --filter ./packages/utils build"
+    "build:pear": "gulp -f packages/components/script/build/index.ts & pnpm run --filter ./packages/utils build",
+    "publish:pear-view": "gulp -f packages/components/script/publish/index.ts",
+    "publish:pear-utils": "gulp -f packages/utils/publish/index.ts"
   },
   "peerDependencies": {
     "vue": "3.2.37"
@@ -20,6 +22,7 @@
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-sass": "^5.1.0",
+    "release-it": "^17.6.0",
     "sass": "^1.78.0",
     "sucrase": "^3.35.0",
     "typescript": "^5.5.3",

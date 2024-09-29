@@ -2,15 +2,25 @@
   "name": "@pear-view/utils",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
-  "main": "index.ts",
+  "module": "./dist/es/index.js",
+  "main": "./dist/lib/index.js",
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "release": "release-it"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "types": "./dist/es/index.d.ts",
   "dependencies": {
     "@pear-view/components": "workspace:^"
+  },
+  "author": "zhangzy",
+  "description": "Utils",
+  "license": "MIT",
+  "keywords": [
+    "Utils"
+  ],
+  "homepage": "https://www.npmjs.com/package/pear-view",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/z-pear/pear-view"
   }
 }
