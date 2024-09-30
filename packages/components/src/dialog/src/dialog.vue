@@ -21,8 +21,8 @@
         </main>
 
         <footer>
-          <span @click="cancel">取消</span>
-          <span type="primary" @click="handleOk" style="margin-left: 12px">确认</span>
+          <Button @click="cancel">取消</Button>
+          <Button type="primary" @click="handleOk" style="margin-left: 12px">确认</Button>
         </footer>
       </div>
     </Transition>
@@ -32,8 +32,9 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue'
 // import { Icon } from '@iconify/vue'
-// import Button from '@/index'
-import '../../styles/dialog.scss'
+// @ts-ignore
+import Button from '@/button'
+import '@/styles/dialog.scss'
 
 defineOptions({
   name: 'Dialog'

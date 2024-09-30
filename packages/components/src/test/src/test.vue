@@ -2,7 +2,7 @@
   <div>Test - Vue</div>
 
   <div>
-    <img :src="imageUrl" class="test-img" />
+    <img :src="imageUrl" style="width: 500px; margin-top: 16px" />
   </div>
 </template>
 

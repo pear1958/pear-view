@@ -1,12 +1,12 @@
 <template>
-  <div class="btn" :class="buttonClass">
+  <div class="pear-button pear-button-primary" :class="buttonClass">
     <slot />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import '../../styles/button.scss'
+import '@/styles/button.scss'
 
 defineOptions({
   name: 'Button'

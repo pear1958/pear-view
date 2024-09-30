@@ -39,6 +39,7 @@ export default defineConfig({
 
           if (bundler.type === 'chunk') {
             bundler.code = bundler.code.replace(/\.scss/g, '.css')
+            bundler.code = bundler.code.replace(/\@\/styles/g, '../../styles')
           }
         }
       }
