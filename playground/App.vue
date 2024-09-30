@@ -41,7 +41,7 @@
       </Dialog>
     </div>
 
-    <div style="margin-top;: 8px">
+    <div style="margin-top: 8px">
       <Button type="primary">哈哈哈</Button>
 
       <div style="margin-top: 10px">
