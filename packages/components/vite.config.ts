@@ -4,7 +4,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
 import DefineOptions from 'unplugin-vue-define-options/vite'
-import { isImgExt } from './script/utils/file'
+import { imgRegex } from './script/utils/file'
 
 const pathSrc = resolve(__dirname, 'src')
 
@@ -40,6 +40,7 @@ export default defineConfig({
           if (bundler.type === 'chunk') {
             bundler.code = bundler.code.replace(/\.scss/g, '.css')
             bundler.code = bundler.code.replace(/\@\/styles/g, '../../styles')
+            bundler.code = bundler.code.replace(/\@\/assets/g, '../../assets')
           }
         }
       }
@@ -58,16 +59,17 @@ export default defineConfig({
       // fileName: 'pear-view',
     },
     rollupOptions: {
-      external: ['vue', /\.scss/, '@pear-view/utils', '@iconify/vue'],
+      external: ['vue', /\.scss$/, imgRegex, '@pear-view/utils', '@iconify/vue'],
       input: ['index.ts'],
       output: [
         {
           format: 'es',
           // 打包后的文件名
-          entryFileNames: chunkInfo => {
-            const { name } = chunkInfo
-            return isImgExt(name) ? name : name + '.mjs'
-          },
+          // entryFileNames: chunkInfo => {
+          //   const { name } = chunkInfo
+          //   return isImgExt(name) ? name : name + '.mjs'
+          // },
+          entryFileNames: '[name].mjs',
           preserveModules: true, // 让打包目录和我们目录对应
           exports: 'named', // https://cn.rollupjs.org/configuration-options/#output-exports
           dir: './dist/es'

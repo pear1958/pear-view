@@ -24,6 +24,13 @@ export const buildStyle = () => {
     .pipe(dest(`${componentPath}/dist/lib/src/styles`))
 }
 
+// 拷贝静态资源
+export const buildImg = () => {
+  return src(`${componentPath}/src/assets/**/*`, { encoding: false })
+    .pipe(dest(`${componentPath}/dist/es/src/assets`))
+    .pipe(dest(`${componentPath}/dist/lib/src/assets`))
+}
+
 // 打包组件
 export const buildComponent = async () => {
   run('pnpm run build', componentPath)
@@ -33,6 +40,7 @@ export const build: TaskFunction = series(
   async () => removeDist(),
   parallel(
     async () => buildStyle(),
+    async () => buildImg(),
     async () => buildComponent()
   )
 )
