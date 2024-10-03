@@ -1,5 +1,5 @@
 {
-  "name": "@pear-view/utils",
+  "name": "pear-view-utils",
   "version": "1.0.0",
   "type": "module",
   "module": "./dist/es/index.js",
@@ -9,9 +9,6 @@
     "release": "release-it"
   },
   "types": "./dist/es/index.d.ts",
-  "dependencies": {
-    "@pear-view/components": "workspace:^"
-  },
   "author": "zhangzy",
   "description": "Utils",
   "license": "MIT",
@@ -22,5 +19,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/z-pear/pear-view"
+  },
+  "dependencies": {
+    "pear-view-ui": "workspace:^"
   }
 }

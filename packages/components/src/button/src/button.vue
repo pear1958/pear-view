@@ -1,5 +1,5 @@
 <template>
-  <div class="pear-button pear-button-primary" :class="buttonClass">
+  <div class="pear-button" :class="buttonClass">
     <slot />
   </div>
 </template>
@@ -19,6 +19,6 @@ type ButtonProps = {
 const buttonProps = defineProps<ButtonProps>()
 
 const buttonClass = computed(() => {
-  return { [`btn--${buttonProps.type}`]: !!buttonProps.type }
+  return { [`pear-button-${buttonProps.type}`]: !!buttonProps.type }
 })
 </script>
