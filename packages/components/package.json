@@ -13,6 +13,8 @@
   ],
   "types": "./dist/es/index.d.ts",
   "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "build": "vite build"
   },
   "peerDependencies": {

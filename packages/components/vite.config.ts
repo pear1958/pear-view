@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -9,6 +10,9 @@ import { imgRegex } from './script/utils/file'
 const pathSrc = resolve(__dirname, 'src')
 
 export default defineConfig({
+  test: {
+    environment: 'happy-dom'
+  },
   resolve: {
     alias: {
       '@': pathSrc

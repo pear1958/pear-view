@@ -2,6 +2,7 @@ node_modules
 
 packages/components/dist/es
 packages/components/dist/lib
+packages/components/coverage
 
 packages/utils/dist/es
 packages/utils/dist/lib
