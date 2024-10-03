@@ -13,8 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vitepress": "^1.2.3",
-    "vue": "3.2.37"
+    "vitepress": "^1.2.3"
   },
   "dependencies": {
     "pear-view-ui": "workspace:^"

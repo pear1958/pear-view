@@ -5,3 +5,5 @@ packages/components/dist/lib
 
 packages/utils/dist/es
 packages/utils/dist/lib
+
+docs/.vitepress/dist
