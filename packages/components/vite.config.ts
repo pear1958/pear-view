@@ -63,7 +63,7 @@ export default defineConfig({
       // fileName: 'pear-view',
     },
     rollupOptions: {
-      external: ['vue', /\.scss$/, imgRegex],
+      external: ['vue', /\.scss$/, imgRegex, '@iconify/vue'],
       input: ['index.ts'],
       output: [
         {
