@@ -9,3 +9,5 @@ packages/utils/dist/lib
 
 docs/.vitepress/dist
 docs/.vitepress/cache
+
+vite.config.ts.timestamp-*.mjs
