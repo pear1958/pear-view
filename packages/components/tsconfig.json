@@ -12,7 +12,8 @@
     "../components/**/*.tsx",
     "../components/**/*.vue",
     "index.ts",
-    "types",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
   ],
   "exclude": [
     "node_modules",

@@ -61,11 +61,7 @@ import {
   Button,
   Test,
   TestVue
-} from '@pear-view/components'
-
-// defineOptions({
-//   name: 'TestApp'
-// })
+} from 'pear-view-ui'
 
 const openedValue = ref(['a'])
 
