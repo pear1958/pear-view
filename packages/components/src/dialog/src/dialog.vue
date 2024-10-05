@@ -21,7 +21,7 @@
 
         <footer>
           <Button @click="cancel">取消</Button>
-          <Button type="primary" @click="handleOk" style="margin-left: 12px">确认</Button>
+          <Button type="primary" @click="handleOk">确认</Button>
         </footer>
       </div>
     </Transition>

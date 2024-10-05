@@ -11,3 +11,4 @@ export default {
 
 export * from './src'
 export { default as openDialog } from './src/dialog/src/openDialog'
+export { default as TabItem } from './src/tabs/src/tab-item'

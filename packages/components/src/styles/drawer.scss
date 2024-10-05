@@ -1,0 +1,70 @@
+@import './variable.scss';
+@import './base.scss';
+
+.mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.drawer {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  background: #ffffff;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.12);
+  z-index: 1300;
+  right: 0;
+
+  .header {
+    height: 55px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+
+    .title {
+      color: #000000d9;
+      font-size: 16px;
+    }
+
+    .close-icon {
+      font-size: 18px;
+      color: #72767b;
+      cursor: pointer;
+      transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        // color: var(--el-color-primary);
+        color: $pear-primary-color;
+      }
+    }
+  }
+
+  .body {
+    height: calc(100vh - 130px);
+    overflow-y: scroll;
+
+    .content-box {
+      padding: 20px;
+    }
+  }
+
+  .footer {
+    padding: 16px;
+    border-top: 1px solid #f0f0f0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+  }
+}

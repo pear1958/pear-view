@@ -7,6 +7,8 @@ declare module '@vue/runtime-core' {
     CollapseItem: typeof import('../src/collapse/src/collapse-item.vue')['default']
     Dialog: typeof components.Dialog
     Loading: typeof components.Loading
+    Drawer: typeof components.Drawer
+    Tabs: typeof components.Tabs
     Test: typeof components.Test
     TestVue: typeof components.TestVue
   }
