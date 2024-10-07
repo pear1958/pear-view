@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build:pear-view": "gulp -f packages/components/script/build/index.ts & pnpm run --filter ./packages/utils build",
+    "build:pear-view-ui": "gulp -f packages/components/script/build/index.ts",
+    "build:pear-view-utils": "pnpm run --filter ./packages/utils build",
     "publish:pear-view-ui": "gulp -f packages/components/script/publish/index.ts",
     "publish:pear-view-utils": "gulp -f packages/utils/publish/index.ts"
   },
