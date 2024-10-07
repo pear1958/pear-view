@@ -1,5 +1,3 @@
-// import { ElMessage } from 'element-plus'
-
 // https://blog.csdn.net/csdn2314/article/details/107203776
 // RGB的数值 = 16 * HEX的第一位 + HEX的第二位
 
@@ -9,7 +7,6 @@ export function hexToRgb(str: string): number[] | any {
   const reg = /^\#?[0-9A-Fa-f]{6}$/
 
   if (!reg.test(str)) {
-    // ElMessage.warning('输入错误的hex')
     console.error('输入错误的hex')
     return false
   }
@@ -36,7 +33,6 @@ export function rgbToHex(r: number, g: number, b: number): string | boolean {
   const reg = /^\d{1,3}$/ // 1到3个字符
 
   if (!reg.test(String(r)) || !reg.test(String(g)) || !reg.test(String(b))) {
-    // ElMessage.warning('输入错误的rgb颜色值')
     console.error('输入错误的rgb颜色值')
     return false
   }
@@ -60,7 +56,6 @@ export function getDarkColor(color: string, level: number) {
   const reg = /^\#?[0-9A-Fa-f]{6}$/
 
   if (!reg.test(color)) {
-    // ElMessage.warning('输入错误的hex颜色值')
     console.error('输入错误的hex颜色值')
     return false
   }
@@ -84,7 +79,6 @@ export function getLightColor(color: string, level: number) {
   const reg = /^\#?[0-9A-Fa-f]{6}$/
 
   if (!reg.test(color)) {
-    // ElMessage.warning('输入错误的hex颜色值')
     console.error('输入错误的hex颜色值')
     return false
   }
