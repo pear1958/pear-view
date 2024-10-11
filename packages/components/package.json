@@ -32,7 +32,7 @@
   "homepage": "https://www.npmjs.com/package/pear-view-ui",
   "repository": {
     "type": "git",
-    "url": "https://github.com/z-pear/pear-view"
+    "url": "https://github.com/pear1958/pear-view"
   },
   "dependencies": {
     "@iconify/vue": "4.1.1",

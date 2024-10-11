@@ -23,6 +23,6 @@ export default {
         }
       ]
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/z-pear/pear-view' }]
+    socialLinks: [{ icon: 'github', link: 'https://github.com/pear1958/pear-view' }]
   }
 }
