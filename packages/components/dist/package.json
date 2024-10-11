@@ -1,6 +1,6 @@
 {
   "name": "pear-view",
-  "version": "1.0.0",
+  "version": "0.0.9",
   "module": "es/index.mjs",
   "main": "lib/index.js",
   "typings": "es/index.d.ts",
