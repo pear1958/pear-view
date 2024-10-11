@@ -1,5 +1,5 @@
 {
-  "name": "pear-view-ui",
+  "name": "pear-view",
   "version": "1.0.0",
   "type": "module",
   "module": "./dist/es/index.mjs",
