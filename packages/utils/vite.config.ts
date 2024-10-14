@@ -7,7 +7,8 @@ export default defineConfig({
     dts({
       entryRoot: '../utils',
       outDir: ['./dist/es', './dist/lib'],
-      tsconfigPath: './tsconfig.json'
+      tsconfigPath: './tsconfig.json',
+      // copyDtsFiles: true,
     })
   ],
   build: {
