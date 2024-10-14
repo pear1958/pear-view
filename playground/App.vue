@@ -27,10 +27,10 @@
     </div>
 
     <div>
-      <Button type="primary" @click="dialogVisible = true">打开对话框</Button>
+      <el-button type="primary" @click="dialogVisible = true">打开对话框</el-button>
 
       <div style="margin-top: 16px">
-        <Button type="primary" @click="showDialogByFunc">函数式调用对话框</Button>
+        <el-button type="primary" @click="showDialogByFunc">函数式调用对话框</el-button>
       </div>
 
       <Dialog
@@ -60,7 +60,7 @@
     </div>
 
     <div class="mt-10">
-      <Button @click="drawerVisible = true" type="primary">打开Drawer</Button>
+      <el-button @click="drawerVisible = true" type="primary">打开Drawer</el-button>
 
       <Drawer v-model="drawerVisible" title="抽屉组件">
         <template #title>
@@ -71,8 +71,8 @@
         <div>底部内容</div>
 
         <template #footer>
-          <Button @click="drawerVisible = false">取消</Button>
-          <Button type="primary" @click="drawerVisible = false">确定</Button>
+          <el-button @click="drawerVisible = false">取消</el-button>
+          <el-button type="primary" @click="drawerVisible = false">确定</el-button>
         </template>
       </Drawer>
     </div>
@@ -87,13 +87,12 @@ import {
   Loading,
   Dialog,
   openDialog,
-  Button,
   Test,
   TestVue,
   Tabs,
   TabItem,
   Drawer
-} from 'pear-view-ui'
+} from 'pear-view'
 
 const openedValue = ref(['a'])
 

@@ -21,19 +21,19 @@
       </div>
 
       <div class="body">
-        <!-- <el-scrollbar> -->
-        <div class="content-box">
-          <slot />
-        </div>
-        <!-- </el-scrollbar> -->
+        <el-scrollbar>
+          <div class="content-box">
+            <slot />
+          </div>
+        </el-scrollbar>
       </div>
 
       <div class="footer">
         <slot name="footer" v-if="slots.footer" />
 
         <template v-else>
-          <Button @click="cancel">取消</Button>
-          <Button type="primary" @click="confirm" style="margin-left: 12px">确定</Button>
+          <el-button @click="cancel">取消</el-button>
+          <el-button type="primary" @click="confirm" style="margin-left: 12px">确定</el-button>
         </template>
       </div>
     </div>
@@ -43,8 +43,6 @@
 <script setup lang="ts">
 import { useSlots } from 'vue'
 import { Icon } from '@iconify/vue'
-// @ts-ignore
-import Button from '@/button'
 import '@/styles/drawer.scss'
 
 defineOptions({

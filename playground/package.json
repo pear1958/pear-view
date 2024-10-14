@@ -6,6 +6,6 @@
     "dev": "vite"
   },
   "dependencies": {
-    "pear-view-ui": "workspace:^"
+    "pear-view": "workspace:^"
   }
 }

@@ -16,6 +16,6 @@
     "vitepress": "^1.2.3"
   },
   "dependencies": {
-    "pear-view-ui": "workspace:^"
+    "pear-view": "workspace:^"
   }
 }

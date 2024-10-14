@@ -4,8 +4,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "gulp -f packages/components/script/build/index.ts & pnpm run --filter ./packages/utils build",
+    "build": "gulp -f packages/components/script/build/index.ts",
+    "build:all": "gulp -f packages/components/script/build/index.ts & pnpm run --filter ./packages/utils build",
     "publish": "gulp -f packages/components/script/publish/index.ts"
+  },
+  "dependencies": {
+    "element-plus": "^2.3.14"
   },
   "devDependencies": {
     "@types/gulp": "^4.0.17",
