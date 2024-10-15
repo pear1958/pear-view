@@ -1,7 +1,5 @@
-export * from './button'
 export * from './collapse'
 export * from './dialog'
 export * from './loading'
 export * from './drawer'
 export * from './tabs'
-export * from './test'

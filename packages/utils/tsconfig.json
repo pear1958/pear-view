@@ -4,4 +4,10 @@
     "src/**/*.ts",
     "index.ts"
   ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.js",
+    "vite.config.ts",
+  ],
 }

@@ -1,4 +1,4 @@
-@import './base.scss';
+@import './transition.scss';
 
 .dialog-mask {
   position: fixed;
@@ -38,7 +38,7 @@
       transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
       &:hover {
-        color: var(--pear-primary);
+        color: var(--el-color-primary);
       }
     }
   }

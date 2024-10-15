@@ -1,5 +1,4 @@
-@import './variable.scss';
-@import './base.scss';
+@import './transition.scss';
 
 .tabs {
   &-nav {
@@ -13,7 +12,7 @@
       padding: 8px 16px;
 
       &.selected {
-        color: $pear-primary-color;
+        color: var(--el-color-primary);
       }
     }
   }
@@ -24,7 +23,7 @@
     position: absolute;
     left: 0;
     bottom: -1px;
-    background: $pear-primary-color;
+    background: var(--el-color-primary);
     transition: all 0.25s ease-in-out;
   }
 

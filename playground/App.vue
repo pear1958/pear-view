@@ -47,11 +47,6 @@
     </div>
 
     <div class="mt-10">
-      <Test />
-      <TestVue />
-    </div>
-
-    <div class="mt-10">
       <Tabs v-model:selected="title">
         <TabItem title="体育新闻">体育新闻-xxxxxxxxx</TabItem>
         <TabItem title="财经新闻">财经新闻-yyyyyyyyy</TabItem>
@@ -87,8 +82,6 @@ import {
   Loading,
   Dialog,
   openDialog,
-  Test,
-  TestVue,
   Tabs,
   TabItem,
   Drawer
